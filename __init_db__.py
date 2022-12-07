@@ -5,8 +5,8 @@ from project.Milk_products.models import Milk_products
 from project.Fishes.models import Fishes
 from project.Pastries.models import Pastries
 
-category1 = Categories(name= "dairy products", Description="Dairy products of all types of milk", link="/Milk_products", img='project/static/categories/milks.jpeg')
-category2 = Categories(name= "meat products", Description="meet by weight and related products", link="/Meat_products", img='project/static/categories/meats.jpg')
+category1 = Categories(name= "dairy products", Description="Dairy products of all types of milk", link="/Milk_products", img='\milks.jpeg')
+category2 = Categories(name= "meat products", Description="meet by weight and related products", link="/Meat_products", img='/meats.jpg')
 category3 = Categories(name= "fishes", Description="Fish by weight and related products", link="/Fishes", img='project/static/categories/fishes.jpeg')
 category4 = Categories(name= "pastries", Description="Baked products and prepared desserts", link="/Pastries", img='project/static/categories/desserts.jpeg')
 
