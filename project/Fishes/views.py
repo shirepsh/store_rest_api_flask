@@ -14,10 +14,10 @@ def all_Fishes(id = -1):
     fishes_res =[]
     if int(id) == -1:
         for fish in Fishes.query.all():
-            fishes_res.append({"id":fish.id, "name":fish.name, "price":fish.price, "Description":fish.Description})
+            fishes_res.append({"id":fish.id, "name":fish.name, "price":fish.price, "Description":fish.Description, "img":fish.img})
         return fishes_res
     if int(id) > -1: 
         fish = Fishes.query.get(int(id))
-        fishes_res.append({"id":fish.id, "name":fish.name, "price":fish.price, "Description":fish.Description})
+        fishes_res.append({"id":fish.id, "name":fish.name, "price":fish.price, "Description":fish.Description, "img":fish.img})
         return fishes_res
 

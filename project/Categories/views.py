@@ -14,9 +14,9 @@ def all_Categories(id = -1):
     Categories_res =[]
     if int(id) == -1:
         for category in Categories.query.all():
-            Categories_res.append({"id":category.id, "name":category.name, "Description":category.Description, "link":category.link})
+            Categories_res.append({"id":category.id, "name":category.name, "Description":category.Description, "link":category.link, "img":category.img})
         return Categories_res
     if int(id) > -1: 
         category = Categories.query.get(int(id))
-        Categories_res.append({"id":category.id, "name":category.name, "Description":category.Description, "link":category.link})
+        Categories_res.append({"id":category.id, "name":category.name, "Description":category.Description, "link":category.link, "img":category.img})
         return Categories_res

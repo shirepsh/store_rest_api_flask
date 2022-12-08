@@ -14,9 +14,9 @@ def all_Pastries(id = -1):
     Pastries_res =[]
     if int(id) == -1:
         for Pastrie in Pastries.query.all():
-            Pastries_res.append({"id":Pastrie.id, "name":Pastrie.name, "price":Pastrie.price, "Description":Pastrie.Description})
+            Pastries_res.append({"id":Pastrie.id, "name":Pastrie.name, "price":Pastrie.price, "Description":Pastrie.Description, "img":Pastrie.img})
         return Pastries_res
     if int(id) > -1: 
         Pastrie = Pastries.query.get(int(id))
-        Pastries_res.append({"id":Pastrie.id, "name":Pastrie.name, "price":Pastrie.price, "Description":Pastrie.Description})
+        Pastries_res.append({"id":Pastrie.id, "name":Pastrie.name, "price":Pastrie.price, "Description":Pastrie.Description, "img":Pastrie.img})
         return Pastries_res

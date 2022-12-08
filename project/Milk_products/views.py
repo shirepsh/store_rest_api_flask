@@ -14,10 +14,10 @@ def all_Milk_products(id = -1):
     milk_res =[]
     if int(id) == -1:
         for milk in Milk_products.query.all():
-            milk_res.append({"id":milk.id, "name":milk.name, "price":milk.price, "Description":milk.Description})
+            milk_res.append({"id":milk.id, "name":milk.name, "price":milk.price, "Description":milk.Description, "img":milk.img})
         return milk_res
     if int(id) > -1: 
         milk = Milk_products.query.get(int(id))
-        milk_res.append({"id":milk.id, "name":milk.name, "price":milk.price, "Description":milk.Description})
+        milk_res.append({"id":milk.id, "name":milk.name, "price":milk.price, "Description":milk.Description, "img":milk.img})
         return milk_res
 

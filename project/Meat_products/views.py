@@ -14,9 +14,9 @@ def all_Meat_products(id = -1):
     meat_res =[]
     if int(id) == -1:
         for meat_product in Meat_products.query.all():
-            meat_res.append({"id":meat_product.id, "name":meat_product.name, "price":meat_product.price, "Description":meat_product.Description})
+            meat_res.append({"id":meat_product.id, "name":meat_product.name, "price":meat_product.price, "Description":meat_product.Description, "img":meat_product.img})
         return meat_res
     if int(id) > -1: 
         meat_product = Meat_products.query.get(int(id))
-        meat_res.append({"id":meat_product.id, "name":meat_product.name, "price":meat_product.price, "Description":meat_product.Description})
+        meat_res.append({"id":meat_product.id, "name":meat_product.name, "price":meat_product.price, "Description":meat_product.Description, "img":meat_product.img})
         return meat_res
